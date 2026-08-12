@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fidelity Infracon & Engineering Pvt. Ltd. | MEP, Fire Protection & Technical PMC</title>
+<meta name="description" content="Fidelity Infracon & Engineering Pvt. Ltd. — MEP, Fire Protection (FPS), Fire Alarm (FAS) and Technical PMC & Compliance services across Raipur, Mumbai, Ranchi and Bhubaneswar.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath d='M150 50 C185 50 218 64 218 64 L218 155 C218 205 185 240 150 258 C115 240 82 205 82 155 L82 64 C82 64 115 50 150 50 Z' fill='%23122036'/%3E%3Cpath d='M150 68 C178 68 204 80 204 80 L204 153 C204 194 178 224 150 240 C122 224 96 194 96 153 L96 80 C96 80 122 68 150 68 Z' fill='%231a8f60'/%3E%3Cpath d='M118 152 L142 176 L188 118' fill='none' stroke='%23fff' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#122036; --navy-2:#1c3d73; --emerald:#1a8f60; --emerald-light:#9fd9bc;
+    --cream:#faf9f5; --mint:#eef3ee; --gray-dark:#3c3f45; --gray-med:#6b6f76;
+    --divider:#dedad0; --white:#ffffff;
+    --font-display:'Fraunces',serif; --font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    --maxw:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
+  body{font-family:var(--font-body); color:var(--gray-dark); background:var(--cream); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  img,svg{display:block;}
+  a{color:inherit; text-decoration:none;}
+  .container{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  h1,h2,h3{font-family:var(--font-display); color:var(--navy); font-weight:700; line-height:1.15;}
+  .eyebrow{font-family:var(--font-body); font-size:12px; font-weight:700; letter-spacing:2px; color:var(--emerald); text-transform:uppercase; margin-bottom:10px;}
+  .section{padding:96px 0;}
+  .section-tight{padding:72px 0;}
+  @media (max-width:768px){ .section{padding:64px 0;} .section-tight{padding:48px 0;} }
+  .section-head{max-width:640px; margin-bottom:48px;}
+  .section-head h2{font-size:clamp(26px,3.4vw,38px);}
+  .section-head p{margin-top:14px; color:var(--gray-med); font-size:16px;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:13px 26px; border-radius:8px; font-weight:600; font-size:14.5px; cursor:pointer; border:1.5px solid transparent; transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--emerald); color:#fff;}
+  .btn-primary:hover{box-shadow:0 8px 20px rgba(26,143,96,.35);}
+  .btn-outline{border-color:rgba(255,255,255,.35); color:#fff;}
+  .btn-outline:hover{background:rgba(255,255,255,.08);}
+  .btn-outline-dark{border-color:var(--navy); color:var(--navy);}
+  .btn-outline-dark:hover{background:var(--navy); color:#fff;}
+  .icon{width:24px; height:24px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0;}
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:none;}
+
+  /* ---------- NAV ---------- */
+  header{position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(18,32,54,.92); backdrop-filter:blur(10px); border-bottom:1px solid rgba(255,255,255,.06);}
+  .navwrap{display:flex; align-items:center; justify-content:space-between; height:76px;}
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand .mark{width:34px; height:34px;}
+  .brand .word{font-family:var(--font-display); font-weight:700; font-size:17px; color:#fff; letter-spacing:.5px;}
+  .brand .word span{color:var(--emerald-light); font-family:var(--font-body); font-weight:600; font-size:9px; display:block; letter-spacing:1.4px; margin-top:1px;}
+  nav ul{list-style:none; display:flex; gap:30px;}
+  nav a{color:#dfe4e8; font-size:14px; font-weight:500; transition:color .15s;}
+  nav a:hover{color:var(--emerald-light);}
+  .nav-cta{display:flex; align-items:center; gap:14px;}
+  .navbtn{display:none;}
+  .hamburger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:6px;}
+  .hamburger span{width:22px; height:2px; background:#fff;}
+  @media (max-width:920px){
+    nav{display:none;}
+    .nav-cta .btn-primary{display:none;}
+    .hamburger{display:flex;}
+  }
+  #mobilemenu{display:none; position:fixed; inset:76px 0 0 0; background:var(--navy); z-index:99; padding:30px 24px; flex-direction:column; gap:4px;}
+  #mobilemenu.open{display:flex;}
+  #mobilemenu a{color:#fff; font-size:19px; padding:16px 4px; border-bottom:1px solid rgba(255,255,255,.08); font-family:var(--font-display); font-weight:600;}
+  #mobilemenu .btn{margin-top:20px; justify-content:center;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--navy); position:relative; overflow:hidden; padding:170px 0 90px;}
+  .hero::before{content:''; position:absolute; top:-220px; right:-160px; width:520px; height:520px; border-radius:50%; background:var(--navy-2); opacity:.55;}
+  .hero::after{content:''; position:absolute; bottom:-260px; left:-180px; width:420px; height:420px; border-radius:50%; background:var(--navy-2); opacity:.4;}
+  .hero-inner{position:relative; z-index:2; max-width:760px;}
+  .hero .eyebrow{color:var(--emerald-light);}
+  .hero h1{font-size:clamp(34px,5.2vw,58px); color:#fff; margin-bottom:20px;}
+  .hero h1 em{font-style:normal; color:var(--emerald-light);}
+  .hero p.lead{font-size:18px; color:#c7d0d6; max-width:600px; margin-bottom:36px;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:64px;}
+  .hero-stats{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,.1); border-radius:12px; overflow:hidden; position:relative; z-index:2;}
+  .hero-stats div{background:#152741; padding:22px 18px;}
+  .hero-stats .num{font-family:var(--font-display); font-size:28px; font-weight:700; color:var(--emerald-light);}
+  .hero-stats .lbl{font-size:11.5px; color:#aeb7bd; margin-top:4px;}
+  @media (max-width:768px){ .hero-stats{grid-template-columns:repeat(2,1fr);} }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:start;}
+  @media (max-width:860px){ .about-grid{grid-template-columns:1fr;} }
+  .about-grid p{color:var(--gray-dark); margin-bottom:16px; font-size:15.5px;}
+  .about-note{display:flex; gap:14px; align-items:flex-start; background:var(--mint); padding:18px 20px; border-radius:10px; margin-top:20px;}
+  .about-note .icon{color:var(--emerald); width:26px; height:26px; margin-top:2px;}
+  .about-note p{margin:0; font-size:14px; font-style:italic; color:var(--navy);}
+  .stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .stat-card{background:var(--mint); border-radius:12px; padding:26px 18px; text-align:center;}
+  .stat-card .icon{color:var(--emerald); margin:0 auto 12px;}
+  .stat-card .num{font-family:var(--font-display); font-size:26px; font-weight:700; color:var(--navy);}
+  .stat-card .lbl{font-size:12px; color:var(--gray-med); margin-top:4px;}
+
+  /* ---------- SERVICE GRID ---------- */
+  .tabs{display:flex; gap:10px; margin-bottom:36px; flex-wrap:wrap;}
+  .tab-btn{padding:10px 20px; border-radius:24px; border:1.5px solid var(--divider); background:#fff; font-weight:600; font-size:13.5px; cursor:pointer; color:var(--gray-med);}
+  .tab-btn.active{background:var(--navy); border-color:var(--navy); color:#fff;}
+  .service-panel{display:none;}
+  .service-panel.active{display:block;}
+  .svc-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px 40px;}
+  @media (max-width:700px){ .svc-grid{grid-template-columns:1fr;} }
+  .svc-item{display:flex; gap:16px;}
+  .svc-item .ic{width:48px; height:48px; border-radius:50%; background:var(--mint); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .svc-item .ic .icon{color:var(--emerald); width:22px; height:22px;}
+  .svc-item h4{font-family:var(--font-body); font-size:15.5px; font-weight:700; color:var(--navy); margin-bottom:3px;}
+  .svc-item p{font-size:13.5px; color:var(--gray-med);}
+
+  .other-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media (max-width:860px){ .other-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .other-grid{grid-template-columns:1fr;} }
+  .other-card{background:#fff; border:1px solid var(--divider); border-radius:14px; padding:26px; transition:box-shadow .2s, transform .2s;}
+  .other-card:hover{box-shadow:0 14px 30px rgba(18,32,54,.08); transform:translateY(-3px);}
+  .other-card .ic{width:50px; height:50px; border-radius:12px; background:var(--emerald); display:flex; align-items:center; justify-content:center; margin-bottom:16px;}
+  .other-card .ic .icon{color:#fff;}
+  .other-card h4{font-size:15.5px; margin-bottom:6px; color:var(--navy);}
+  .other-card p{font-size:13.5px; color:var(--gray-med);}
+
+  /* ---------- 21 GATES ---------- */
+  .gates{background:var(--navy); color:#fff; position:relative; overflow:hidden;}
+  .gates .section-head h2{color:#fff;}
+  .gates .section-head p{color:#c7d0d6;}
+  .phase-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  @media (max-width:900px){ .phase-grid{grid-template-columns:1fr;} }
+  .phase-card{border-radius:16px; padding:28px; color:var(--navy);}
+  .phase-card.p1{background:#d9f0e1;}
+  .phase-card.p2{background:#d7e6f5;}
+  .phase-card.p3{background:#e3dbf3;}
+  .phase-badge{display:inline-block; background:#fff; padding:6px 14px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:.5px; margin-bottom:14px;}
+  .phase-card h3{font-size:20px; margin-bottom:4px;}
+  .phase-card .sub{font-weight:600; font-size:13px; margin-bottom:16px; opacity:.85;}
+  .phase-card ul{list-style:none;}
+  .phase-card li{font-size:13px; padding-left:18px; position:relative; margin-bottom:9px; opacity:.9;}
+  .phase-card li::before{content:''; position:absolute; left:0; top:6px; width:5px; height:5px; border-radius:50%; background:currentColor;}
+
+  /* ---------- CLIENTS ---------- */
+  .client-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:14px;}
+  @media (max-width:860px){ .client-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:560px){ .client-grid{grid-template-columns:repeat(2,1fr);} }
+  .client-card{background:var(--mint); border-radius:10px; padding:24px 12px; text-align:center; font-weight:700; color:var(--navy); font-size:14px;}
+  .track-note{text-align:center; font-style:italic; color:var(--gray-med); max-width:720px; margin:36px auto 0; font-size:15px;}
+
+  /* ---------- CERTIFICATIONS ---------- */
+  .cert-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media (max-width:760px){ .cert-grid{grid-template-columns:1fr;} }
+  .cert-card{background:var(--mint); border-radius:16px; padding:36px 26px; text-align:center;}
+  .cert-card .ic{width:64px; height:64px; border-radius:50%; background:var(--emerald); display:flex; align-items:center; justify-content:center; margin:0 auto 18px;}
+  .cert-card .ic .icon{color:#fff; width:30px; height:30px;}
+  .cert-card h4{font-family:var(--font-display); font-size:19px; color:var(--navy); margin-bottom:6px;}
+  .cert-card .sub{font-size:13.5px; color:var(--gray-dark); margin-bottom:6px;}
+  .cert-card .num{font-size:11.5px; color:var(--gray-med);}
+
+  /* ---------- WHY + SERVE ---------- */
+  .why-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+  @media (max-width:860px){ .why-grid{grid-template-columns:1fr; gap:40px;} }
+  .why-list{list-style:none;}
+  .why-list li{display:flex; gap:14px; align-items:flex-start; padding:13px 0; border-bottom:1px solid var(--divider); font-size:15px;}
+  .why-list li:last-child{border-bottom:none;}
+  .why-list .icon{color:var(--emerald); width:20px; height:20px; margin-top:2px;}
+  .serve-card{display:flex; gap:16px; align-items:center; background:var(--mint); border-radius:12px; padding:18px 20px; margin-bottom:14px;}
+  .serve-card .ic{width:46px; height:46px; border-radius:50%; background:var(--emerald); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .serve-card .ic .icon{color:#fff; width:20px; height:20px;}
+  .serve-card h4{font-size:14.5px; color:var(--navy); margin-bottom:2px;}
+  .serve-card p{font-size:12.5px; color:var(--gray-med);}
+
+  /* ---------- CTA BANNER ---------- */
+  .cta-banner{background:var(--emerald); border-radius:18px; padding:40px 44px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  .cta-banner h3{color:#fff; font-size:22px; margin-bottom:6px;}
+  .cta-banner p{color:#e6f5ec; font-size:14.5px;}
+  .cta-banner .btn{background:#fff; color:var(--emerald);}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  footer{background:var(--navy); color:#fff; padding-top:90px;}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; padding-bottom:60px; border-bottom:1px solid rgba(255,255,255,.1);}
+  @media (max-width:860px){ .contact-grid{grid-template-columns:1fr; gap:36px;} }
+  footer h2{color:#fff; font-size:clamp(26px,3.4vw,36px); margin-bottom:14px;}
+  footer .lead{color:#c7d0d6; font-size:15.5px; margin-bottom:30px; max-width:440px;}
+  .contact-row{display:flex; gap:16px; align-items:flex-start; margin-bottom:24px;}
+  .contact-row .ic{width:42px; height:42px; border-radius:50%; background:var(--emerald); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .contact-row .ic .icon{color:#fff; width:19px; height:19px;}
+  .contact-row h4{font-size:14.5px; margin-bottom:3px;}
+  .contact-row p{font-size:13.5px; color:#c7d0d6;}
+  .contact-row a:hover{color:var(--emerald-light);}
+  .office-list{background:rgba(255,255,255,.05); border-radius:14px; padding:26px;}
+  .office-list .eyebrow{color:var(--emerald-light);}
+  .office-list ul{list-style:none; margin-top:14px;}
+  .office-list li{font-size:14px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.08); color:#dfe4e8;}
+  .office-list li:last-child{border-bottom:none;}
+  .bottom-bar{display:flex; justify-content:space-between; align-items:center; padding:26px 0; flex-wrap:wrap; gap:10px;}
+  .bottom-bar p{font-size:12.5px; color:#8a96a3;}
+  .bottom-bar .gst{font-size:12px; color:var(--emerald-light); font-weight:600;}
+
+  /* ---------- FLOATING CTA ---------- */
+  .float-cta{position:fixed; right:20px; bottom:20px; z-index:90; display:flex; flex-direction:column; gap:12px; align-items:flex-end;}
+  .fab{width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 24px rgba(0,0,0,.22); color:#fff; transition:transform .15s;}
+  .fab:hover{transform:scale(1.07);}
+  .fab.whatsapp{background:#25D366;}
+  .fab.call{background:var(--navy);}
+  .fab .icon{width:24px; height:24px; stroke-width:2;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container navwrap">
+    <a href="#top" class="brand">
+      <svg class="mark" viewBox="0 0 300 300"><path d="M150 50 C185 50 218 64 218 64 L218 155 C218 205 185 240 150 258 C115 240 82 205 82 155 L82 64 C82 64 115 50 150 50 Z" fill="#faf9f5"/><path d="M150 68 C178 68 204 80 204 80 L204 153 C204 194 178 224 150 240 C122 224 96 194 96 153 L96 80 C96 80 122 68 150 68 Z" fill="#1a8f60"/><path d="M118 152 L142 176 L188 118" fill="none" stroke="#122036" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="word">FIDELITY<span>INFRACON &amp; ENGINEERING</span></span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gates">21 Gates</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+917999546155" class="btn btn-outline navbtn" style="display:inline-flex;">Call Us</a>
+      <a href="https://wa.me/917999546155" class="btn btn-primary">WhatsApp</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div id="mobilemenu">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#gates">21 Gates</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+  <a href="https://wa.me/917999546155" class="btn btn-primary">Chat on WhatsApp</a>
+</div>
+
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <p class="eyebrow reveal">MEP &bull; Fire Protection &bull; Fire Alarm &bull; Technical PMC</p>
+    <h1 class="reveal">Engineering today for a <em>safer, smarter</em> tomorrow.</h1>
+    <p class="lead reveal">Fidelity Infracon &amp; Engineering Pvt. Ltd. is an EPC company delivering MEP, fire protection and technical compliance services — with a single point of accountability from concept to Occupancy Certificate.</p>
+    <div class="hero-ctas reveal">
+      <a href="https://wa.me/917999546155" class="btn btn-primary">
+        <svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 9.5c0 3 2.5 5.5 5.5 5.5.7 0 1-.6.7-1.2l-.7-1.4a.8.8 0 0 0-1-.4l-.7.3a4 4 0 0 1-2-2l.3-.7a.8.8 0 0 0-.4-1L9 8.2c-.6-.3-1.2 0-1.2.7"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="tel:+917999546155" class="btn btn-outline">Call +91 79995 46155</a>
+    </div>
+  </div>
+  <div class="container hero-stats reveal">
+    <div><div class="num">20+</div><div class="lbl">Years Experience</div></div>
+    <div><div class="num">100+</div><div class="lbl">Fire &amp; Life Safety Projects</div></div>
+    <div><div class="num">5 Lakh+</div><div class="lbl">Sqft Installed</div></div>
+    <div><div class="num">ISO 9001</div><div class="lbl">2015 Certified</div></div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <p class="eyebrow">About Us</p>
+      <h2>One company, engineered for full accountability.</h2>
+      <p style="margin-top:20px;">Fidelity Infracon &amp; Engineering Pvt. Ltd. is an electromechanical construction (EPC) company with deep expertise in MEP Services, Fire Protection Systems (FPS) and Fire Alarm Systems (FAS).</p>
+      <p>Founded in 2014, we manage engineering, statutory approvals, supply, installation, testing and commissioning — end-to-end — for industrial, commercial and infrastructure projects across Raipur, Mumbai, Ranchi and Bhubaneswar.</p>
+      <div class="about-note">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        <p>Single point of technical accountability from concept to Occupancy Certificate.</p>
+      </div>
+    </div>
+    <div class="stat-grid reveal">
+      <div class="stat-card">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="num">20+</div><div class="lbl">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div class="num">100+</div><div class="lbl">Fire &amp; Life Safety Projects</div>
+      </div>
+      <div class="stat-card">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21 15V6a2 2 0 0 0-2-2H8L2 10l6 6H5"/><path d="m19 15-4 4"/><path d="m15 15 4 4"/></svg>
+        <div class="num">5 Lakh+</div><div class="lbl">Sqft Installed</div>
+      </div>
+      <div class="stat-card">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="num">100+</div><div class="lbl">Skilled Manpower</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services" style="background:#fff;">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Our Services</p>
+      <h2>Fire Protection &amp; Fire Alarm Systems</h2>
+      <p>End-to-end design, supply, installation and commissioning of life-safety systems.</p>
+    </div>
+    <div class="tabs reveal">
+      <button class="tab-btn active" data-tab="fps">Fire Protection (FPS)</button>
+      <button class="tab-btn" data-tab="fas">Fire Alarm (FAS)</button>
+    </div>
+
+    <div class="service-panel active reveal" id="fps">
+      <div class="svc-grid">
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div><h4>Down Comer System</h4><p>Vertical water supply for firefighting</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div><h4>Wet Riser System</h4><p>Pressurised standby water pipework</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div><h4>Fire Sprinkler System</h4><p>Automatic detection &amp; suppression</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div><h4>Pump Room with Automation</h4><p>Automated fire pump control</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div><h4>FM200 Gas Suppression</h4><p>Clean-agent fire suppression</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div><h4>Transformer Protection (HVWS)</h4><p>High-velocity water spray systems</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7.5 7.5 0 1 1-15 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div><h4>MVWS for Conveyor &amp; Industrial</h4><p>Medium-velocity water spray</p></div></div>
+      </div>
+    </div>
+
+    <div class="service-panel" id="fas">
+      <div class="svc-grid">
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div><h4>MCP &amp; Hooter System</h4><p>Manual call points &amp; audible alarms</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div><h4>Smoke Detector System</h4><p>Early smoke &amp; heat detection</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div><h4>Deluge Valve &amp; Gong Bell</h4><p>Mass water-release activation</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div><h4>Honeywell, Siemens, Morley</h4><p>OEM-grade fire alarm panels</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div><h4>Linear Heat Sensing (LHS)</h4><p>Continuous cable-based detection</p></div></div>
+        <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div><h4>Gas Suppression &amp; Dual Alarm</h4><p>Automation with cross-zone alarms</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--cream);">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Beyond Fire &amp; MEP</p>
+      <h2>Other Engineering Services</h2>
+    </div>
+    <div class="other-grid reveal">
+      <div class="other-card"><div class="ic"><svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M3 3v12a1 1 0 0 0 1 1h1"/><path d="M14 17h1a1 1 0 0 0 1-1V8a1 1 0 0 0-.293-.707l-3-3A1 1 0 0 0 12 4h-2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div><h4>Water Systems</h4><p>STP, ETP &amp; Water Filtration Plants</p></div>
+      <div class="other-card"><div class="ic"><svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/><path d="M17.73 7.73A2.5 2.5 0 1 1 19.5 12H2"/></svg></div><h4>Ash Handling</h4><p>Fly / Bottom Ash &amp; Ash Dyke Management</p></div>
+      <div class="other-card"><div class="ic"><svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h4>Industrial Pipeline</h4><p>Installation across process plants</p></div>
+      <div class="other-card"><div class="ic"><svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M19 14a7 7 0 1 0-14 0"/><path d="M12 14v7"/><path d="M9 21h6"/></svg></div><h4>Vacuum &amp; Bag House</h4><p>Industrial vacuum cleaning systems</p></div>
+      <div class="other-card"><div class="ic"><svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg></div><h4>Anti-Abrasive Coating</h4><p>Ceramic-lined equipment protection</p></div>
+      <div class="other-card"><div class="ic"><svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/><path d="M17.73 7.73A2.5 2.5 0 1 1 19.5 12H2"/></svg></div><h4>Dust Suppression</h4><p>DFS systems &amp; fume extractors</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section gates" id="gates">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Technical Compliance Framework</p>
+      <h2>The 21 Gates of Technical Compliance &amp; NOC</h2>
+      <p>A structured 21-gate system ensuring your project meets every technical, statutory and regulatory requirement — before, during and after construction.</p>
+    </div>
+    <div class="phase-grid reveal">
+      <div class="phase-card p1">
+        <span class="phase-badge">GATES 1–7</span>
+        <h3>Phase 1</h3>
+        <div class="sub">Pre-Construction: Planning &amp; Statutory Alignment</div>
+        <ul>
+          <li>Ownership &amp; Title Clearance</li>
+          <li>T&amp;CP Approval &bull; Fire NOC (Provisional)</li>
+          <li>Environmental &amp; Height Clearance</li>
+          <li>Municipal Sanction (OBPAS)</li>
+          <li>RERA Project Registration</li>
+        </ul>
+      </div>
+      <div class="phase-card p2">
+        <span class="phase-badge">GATES 8–14</span>
+        <h3>Phase 2</h3>
+        <div class="sub">Construction-Phase: Technical Governance</div>
+        <ul>
+          <li>Water Abstraction &amp; Telemetry Setup</li>
+          <li>Structural Stability Vetting</li>
+          <li>MEP Clash Detection Audit</li>
+          <li>Electrical Sanction (CEIG)</li>
+          <li>STP Consent &amp; Fire Pressure Logs</li>
+        </ul>
+      </div>
+      <div class="phase-card p3">
+        <span class="phase-badge">GATES 15–21</span>
+        <h3>Phase 3</h3>
+        <div class="sub">Post-Construction: Closeout &amp; Capital Exit</div>
+        <ul>
+          <li>Lift &amp; Escalator License</li>
+          <li>Pollution Control Board CTO</li>
+          <li>Final Electrical Energization</li>
+          <li>As-Built Drawing Reconciliation</li>
+          <li>Final Fire NOC &amp; Occupancy Certificate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#fff;">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Technical PMC</p>
+      <h2>Our Technical PMC Services</h2>
+    </div>
+    <div class="svc-grid reveal">
+      <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg></div><div><h4>Technical Project Management</h4><p>End-to-end project oversight &amp; coordination</p></div></div>
+      <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m9.5 11 1 1 2.5-2.5"/><path d="m21 21-4.3-4.3"/></svg></div><div><h4>Engineering Audits</h4><p>Design, system &amp; process reviews</p></div></div>
+      <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></div><div><h4>Risk Audits &amp; Due Diligence</h4><p>Technical risk identification &amp; mitigation</p></div></div>
+      <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div><div><h4>NOC &amp; Statutory Compliance</h4><p>Approvals, clearances &amp; regulatory alignment</p></div></div>
+      <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><div><h4>MEP &amp; Fire Safety Coordination</h4><p>Integrated systems for safe, efficient buildings</p></div></div>
+      <div class="svc-item"><div class="ic"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 12 16 8"/><path d="M8 12a4 4 0 0 1 4-4"/></svg></div><div><h4>Testing &amp; Commissioning Support</h4><p>Performance validation &amp; documentation</p></div></div>
+    </div>
+    <div style="margin-top:48px;" class="reveal">
+      <div class="cta-banner">
+        <div>
+          <h3>Compliance is not an option.</h3>
+          <p>It is a responsibility — engineered into every project we deliver.</p>
+        </div>
+        <a href="#contact" class="btn">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="clients" style="background:var(--cream);">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Track Record</p>
+      <h2>Trusted by Leading Organisations</h2>
+    </div>
+    <div class="client-grid reveal">
+      <div class="client-card">L&amp;T</div>
+      <div class="client-card">NTPC</div>
+      <div class="client-card">Coal India</div>
+      <div class="client-card">SAIL</div>
+      <div class="client-card">Flipkart</div>
+      <div class="client-card">JUSNL</div>
+      <div class="client-card">MBPCL</div>
+      <div class="client-card">Hira Group</div>
+      <div class="client-card">Ranchi Vidhan Sabha</div>
+      <div class="client-card">Northern Coalfields Ltd.</div>
+    </div>
+    <p class="track-note reveal">Above 5 Lakh Sqft of warehouse and above 10 Lakh Sqft of commercial building sprinkler systems installed, with more than 100 projects delivered in fire fighting and life-safety systems.</p>
+  </div>
+</section>
+
+<section class="section" style="background:#fff;">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Recognised &amp; Registered</p>
+      <h2>Certifications</h2>
+    </div>
+    <div class="cert-grid reveal">
+      <div class="cert-card">
+        <div class="ic"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.2 17 22l-5-3-5 3 1.5-8.8"/></svg></div>
+        <h4>ISO 9001:2015</h4>
+        <div class="sub">Quality Management System</div>
+        <div class="num">Certificate No. 3049200918040</div>
+      </div>
+      <div class="cert-card">
+        <div class="ic"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.2 17 22l-5-3-5 3 1.5-8.8"/></svg></div>
+        <h4>MSME (Udyam)</h4>
+        <div class="sub">Registered Micro Enterprise</div>
+        <div class="num">UAM No. CG14B0008760</div>
+      </div>
+      <div class="cert-card">
+        <div class="ic"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.2 17 22l-5-3-5 3 1.5-8.8"/></svg></div>
+        <h4>Startup India</h4>
+        <div class="sub">DPIIT Recognised Company</div>
+        <div class="num">Certificate No. DIPP72606</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--cream);">
+  <div class="container why-grid">
+    <div class="reveal">
+      <p class="eyebrow">Our Commitment</p>
+      <h2 style="margin-bottom:24px;">Why Choose Fidelity Infracon?</h2>
+      <ul class="why-list">
+        <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Independent technical oversight</li>
+        <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Proactive risk identification</li>
+        <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Seamless regulatory coordination</li>
+        <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Engineering-to-occupancy ownership</li>
+        <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Trusted by industrial &amp; institutional clients</li>
+        <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Focus on quality, safety &amp; defined timelines</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Who We Serve</p>
+      <div class="serve-card">
+        <div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18"/><path d="M6 12H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2"/><path d="M18 9h2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/></svg></div>
+        <div><h4>Industrial</h4><p>Power &bull; Cement &bull; Steel &bull; Manufacturing</p></div>
+      </div>
+      <div class="serve-card">
+        <div class="ic"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="15" rx="2"/><path d="M9 21V11h6v10"/><path d="M9 3h6l1 3H8l1-3Z"/></svg></div>
+        <div><h4>Commercial &amp; Institutional</h4><p>Hospitals &bull; Malls &bull; Offices</p></div>
+      </div>
+      <div class="serve-card">
+        <div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21V10l9-6 9 6v11"/><path d="M7 21v-7h10v7"/></svg></div>
+        <div><h4>Warehousing &amp; Logistics</h4><p>Distribution &amp; Logistics Parks</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="eyebrow" style="color:var(--emerald-light);">Get in Touch</p>
+        <h2>Let's build compliance together.</h2>
+        <p class="lead">Have a project that needs a reliable MEP and technical compliance partner? Reach out — we typically respond within a business day.</p>
+
+        <div class="contact-row">
+          <div class="ic"><svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><h4>Alok Panda &bull; MEP NOC Compliance Specialist</h4><p><a href="tel:+917999546155">+91 79995 46155</a> — Call / WhatsApp</p></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic"><svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div>
+          <div><h4>Email</h4><p><a href="mailto:alokpanda@hotmail.com">alokpanda@hotmail.com</a></p></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic"><svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4>Registered Office</h4><p>House No-9, Nilanchala Vihar, Kachna - Shankar Nagar Road, Raipur-492001, Chhattisgarh</p></div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="office-list">
+          <p class="eyebrow">Offices</p>
+          <ul>
+            <li>Raipur, Chhattisgarh (Registered Office)</li>
+            <li>Mumbai, Maharashtra</li>
+            <li>Ranchi, Jharkhand</li>
+            <li>Bhubaneswar, Odisha</li>
+          </ul>
+        </div>
+        <div style="margin-top:20px; display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="https://wa.me/917999546155" class="btn btn-primary">WhatsApp Us</a>
+          <a href="tel:+917999546155" class="btn btn-outline">Call Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <p>&copy; <span id="year"></span> Fidelity Infracon &amp; Engineering Pvt. Ltd. All rights reserved.</p>
+      <p class="gst">GSTIN: 22AADCF1754G1Z1 &nbsp;&bull;&nbsp; ISO 9001:2015 Certified</p>
+    </div>
+  </div>
+</footer>
+
+<div class="float-cta">
+  <a href="https://wa.me/917999546155" class="fab whatsapp" aria-label="WhatsApp">
+    <svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+  </a>
+  <a href="tel:+917999546155" class="fab call" aria-label="Call">
+    <svg class="icon" viewBox="0 0 24 24" style="stroke:#fff"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobilemenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.service-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
